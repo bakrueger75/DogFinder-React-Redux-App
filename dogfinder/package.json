@@ -9,10 +9,11 @@
     "popper.js": "1.14.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.0",
-    "react-scroll": "^1.7.10",
+    "react-icons": "^3.2.1",
     "react-router": "latest",
-    "react-router-dom": "latest"
+    "react-router-dom": "latest",
+    "react-scripts": "^1.1.0",
+    "react-scroll": "^1.7.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

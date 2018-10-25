@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default class AboutPage extends React.Component {
-  render() {
+const AboutPage = () => {
     return (
       <div id="aboutPage">
         <div id="aboutPage" className="row justify-content-center">
@@ -43,5 +42,6 @@ export default class AboutPage extends React.Component {
         </div>
       </div>
     );
-  }
 }
+
+export default AboutPage;

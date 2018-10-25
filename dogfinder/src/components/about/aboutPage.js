@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../common/header';
-import Footer from '../common/footer';
 
 export default class AboutPage extends React.Component {
   render() {
     return (
-      <div id="aboutPage" className="container">
-        <Header message="About Dog Finder" />
+      <div id="aboutPage">
         <div id="aboutPage" className="row justify-content-center">
           <div id="aboutContent" className="col-10 col-sm-10 col-xs-10 col-md-10 col-lg-8 col-xl-8">
             <p>Dog Finder is a React appliction developed for training purposes to learn React.</p>
@@ -43,7 +40,6 @@ export default class AboutPage extends React.Component {
             </ul>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

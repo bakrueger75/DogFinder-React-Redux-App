@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/styles.css';
+import { Provider } from 'react-redux';
+//import './css/styles.css';
+import './css/compiled/dogfinder.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-//import DogFinder from './components/DogFinder.js';
+import configureStore from './store/configureStore';
+import { loadBreedList, loadAllBreeds } from './actions/dogFinderActions';
+
+const store = configureStore();
+store.dispatch(loadBreedList());
+store.dispatch(loadAllBreeds());
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
   , document.getElementById('root')
 );

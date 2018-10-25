@@ -3,7 +3,6 @@ import {withRouter} from 'react-router-dom';
 import DogImage from './DogImage/DogImage';
 import { MdInfoOutline } from  'react-icons/md';
 
-//const DogSearchItem = ({itemIndex, dog}) => {
 class DogSearchItem  extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -19,10 +18,9 @@ class DogSearchItem  extends React.Component {
       <div id={"dogBreed_"+this.props.itemIndex} className='col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 justify-content-center text-center p-2' key={this.props.itemIndex} style={{cursor: 'pointer'}} >
         <DogImage breedName={this.props.dog.breedName} breed={this.props.dog.breed} subBreed={this.props.dog.subBreed} onClick={this.dogDetails} />
         <div id={"dogBreedName_"+this.props.itemIndex} onClick={this.dogDetails} >
-          <h4 className="text-capitalize text-red text-center">
+          <strong className="text-capitalize text-red text-center">
             {this.props.dog.breedName} <MdInfoOutline/>
-          </h4>
-
+          </strong>
         </div>
       </div>
     );

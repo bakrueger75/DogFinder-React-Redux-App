@@ -1,3 +1,10 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
 body {
   font-family: Open Sans, Arial;
   font-size: 16px;
@@ -5,6 +12,13 @@ body {
 
 h2, h4 {
   color: #bf3d3d;
+}
+
+#headerIcon {
+  img {
+    height: 76px;
+    width: 76px;
+  }
 }
 
 #dogSearchResults {

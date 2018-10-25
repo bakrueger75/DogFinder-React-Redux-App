@@ -10,15 +10,25 @@ export default class DogDetail extends React.Component {
         details: ''
       }
 	  }
+    this.fetchDogDetails = this.fetchDogDetails.bind(this);
 	}
 
-  componentWillMount() {
-    DogFinderApi.getWikipediaDogDetails(this.props.breed, this.props.subBreed)
+  fetchDogDetails(breed, subBreed) {
+    DogFinderApi.getWikipediaDogDetails(breed, subBreed)
       .then((dogDetails) => {
         this.setState({
           dogDetails: dogDetails
         })
       });
+  }
+  componentDidMount() {
+    this.fetchDogDetails(this.props.breed, this.props.subBreed);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.breed !== this.props.breed) {
+      this.fetchDogDetails(this.props.breed, this.props.subBreed);
+    }
   }
 
   render() {

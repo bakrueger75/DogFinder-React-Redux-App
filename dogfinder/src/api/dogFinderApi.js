@@ -50,6 +50,18 @@ export default class DogFinderApi {
 		});
 	}
 
+	static getAllBreeds() {
+		return new Promise((resolve, reject) => {
+			fetch("https://dog.ceo/api/breeds/list/all").then((apiResponse) => {
+				apiResponse.json().then ((data) => {
+					if (data != null) {
+						resolve(data.message);
+					}
+				});
+			});
+		});
+	}
+
 	static fetchDogImage(breed, subBreed) {
 		return new Promise((resolve, reject) => {
 			let subBreedUrl = "";

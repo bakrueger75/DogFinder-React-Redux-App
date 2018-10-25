@@ -2,7 +2,7 @@ import delay from './delay';
 
 export default class DogSearchApi {
 
-  static performDogSearch(searchTerm, breedSearch) {
+  static performDogSearch(searchTerm, breedSearch, allBreeds) {
 		return new Promise((resolve, reject) => {
 
 			let dogResults = {
@@ -13,12 +13,13 @@ export default class DogSearchApi {
 			};
 			if (searchTerm != null && searchTerm.length > 0) {
 				// The service URL should in a properties file instead of in the code.
-				fetch("https://dog.ceo/api/breeds/list/all").then((apiResponse) => {
-					apiResponse.json().then ((data) => {
-						if (data != null) {
+				//fetch("https://dog.ceo/api/breeds/list/all").then((apiResponse) => {
+					//apiResponse.json().then ((data) => {
+            //allBreeds = data.message;
+						if (allBreeds != null) {
 							let dogMatches = [];
-							let dogList = data.message;
-							let breedList = Object.keys(data.message);
+							let dogList = allBreeds;
+							let breedList = Object.keys(allBreeds);
 							let searchMatch = false;
 							let subBreedMatch = false;
 							let matchCount = 0;
@@ -117,6 +118,8 @@ export default class DogSearchApi {
 								}
 							});
 							dogResults.dogCount = matchCount;
+              dogResults.searchTerm = searchTerm;
+              dogResults.breedSearch = breedSearch;
 							if (dogMatches.length > 0) {
 								// Sort the dog results alphabetically by breedName
 								dogMatches.sort((a,b) => {
@@ -133,8 +136,8 @@ export default class DogSearchApi {
             setTimeout(() => {
               resolve(dogResults);
             }, delay);
-					}); // end of json after the fetch
-				}); // End of fetch for all breeds
+					//}); // end of json after the fetch
+				//}); // End of fetch for all breeds
 			} // searchTerm if block
 		});
 	} // performDogSearch

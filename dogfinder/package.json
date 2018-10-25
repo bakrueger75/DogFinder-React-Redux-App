@@ -10,10 +10,14 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^3.2.1",
+    "react-redux": "^5.0.7",
     "react-router": "latest",
     "react-router-dom": "latest",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "^1.1.0",
-    "react-scroll": "^1.7.10"
+    "react-scroll": "^1.7.10",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -28,8 +32,8 @@
     "webpack-dev-middleware": "^3.4.0"
   },
   "scripts": {
-    "prestart": "npm-run-all scss:compile css:concat",
-    "start": "npm-run-all --parallel react:start scss:watch css:watch",
+    "prestart": "npm-run-all scss:compile",
+    "start": "npm-run-all --parallel react:start scss:watch",
     "react:start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

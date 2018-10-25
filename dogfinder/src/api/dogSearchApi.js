@@ -1,9 +1,8 @@
 import delay from './delay';
-import store from '../index';
 
 export default class DogSearchApi {
 
-  static performDogSearch(searchTerm, breedSearch) {
+  static performDogSearch(searchTerm, breedSearch, allBreeds) {
 		return new Promise((resolve, reject) => {
 
 			let dogResults = {
@@ -17,7 +16,6 @@ export default class DogSearchApi {
 				//fetch("https://dog.ceo/api/breeds/list/all").then((apiResponse) => {
 					//apiResponse.json().then ((data) => {
             //allBreeds = data.message;
-            let allBreeds = store.getState().allBreeds;
 						if (allBreeds != null) {
 							let dogMatches = [];
 							let dogList = allBreeds;

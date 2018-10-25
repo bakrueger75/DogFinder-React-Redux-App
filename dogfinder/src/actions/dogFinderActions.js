@@ -32,7 +32,7 @@ export function loadAllBreeds() {
 
 export function dogSearch(searchTerm, breedSearch) {
   return function(dispatch, getState) {
-    return dogSearchApi.performDogSearch(searchTerm, breedSearch).then(searchResults => {
+    return dogSearchApi.performDogSearch(searchTerm, breedSearch, getState().allBreeds).then(searchResults => {
       dispatch(searchSuccess(searchResults));
     });
   };

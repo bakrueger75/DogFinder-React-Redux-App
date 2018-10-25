@@ -21,4 +21,5 @@ ReactDOM.render(
   , document.getElementById('root')
 );
 
+// exporting the store allows apis to import and access the store.
 export default store;

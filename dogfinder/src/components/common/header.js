@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import headerIcon from '../../images/dogfinder-icon.png'
-import SearchForm from '../SearchForm';
+import SearchForm from './SearchForm';
 
 export default class Header extends React.Component {
   render() {

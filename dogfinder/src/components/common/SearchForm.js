@@ -1,6 +1,6 @@
 import React from 'react';
-import spinnerImage from '../images/spinner-gif-17.gif';
-import * as dogFinderActions from '../actions/dogFinderActions';
+import spinnerImage from '../../images/spinner-gif-17.gif';
+import * as dogFinderActions from '../../actions/dogFinderActions';
 import { MdSearch } from 'react-icons/md';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import DogImage from './DogImage/DogImage';
+import DogImage from '../DogImage/DogImage';
 import { MdInfoOutline } from  'react-icons/md';
 
 class DogSearchItem  extends React.Component {

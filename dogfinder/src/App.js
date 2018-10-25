@@ -4,7 +4,7 @@ import { withRouter, Route } from 'react-router-dom';
 import home from './components/homePage';
 import DogDetail from './components/DogDetail/DogDetailPage';
 import AboutPage from './components/about/aboutPage';
-import SearchResultsPage from './components/SearchResultsPage';
+import SearchResultsPage from './components/SearchResults/SearchResultsPage';
 import Header from './components/common/header';
 import Footer from './components/common/footer';
 

@@ -14,6 +14,7 @@ export default class AboutPage extends React.Component {
                 <ul>
                   <li>React</li>
                   <li>React Router</li>
+                  <li>Redux</li>
                   <li>Bootstrap</li>
                   <li>Sass</li>
                 </ul>

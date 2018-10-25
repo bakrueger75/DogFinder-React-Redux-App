@@ -30,9 +30,9 @@ export function loadAllBreeds() {
   };
 }
 
-export function dogSearch(searchTerm, breedSearch, allBreeds) {
+export function dogSearch(searchTerm, breedSearch) {
   return function(dispatch, getState) {
-    return dogSearchApi.performDogSearch(searchTerm, breedSearch, allBreeds).then(searchResults => {
+    return dogSearchApi.performDogSearch(searchTerm, breedSearch).then(searchResults => {
       dispatch(searchSuccess(searchResults));
     });
   };

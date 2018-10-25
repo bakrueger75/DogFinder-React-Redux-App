@@ -33,7 +33,7 @@ class SearchForm extends React.Component {
 	  this.setState({
 		  searchLoading: true
 	  });
-    this.props.actions.dogSearch(searchTerm, breedSearch, this.props.allBreeds)
+    this.props.actions.dogSearch(searchTerm, breedSearch)
       .then(() => {
         this.setState({
     		  searchLoading: false
@@ -105,8 +105,7 @@ SearchForm.contextTypes = {
 function mapStateToProps(state, ownProps) {
     return {
       breedList: state.breedList,
-      searchResults: state.searchResults,
-      allBreeds: state.allBreeds
+      searchResults: state.searchResults
     };
 }
 

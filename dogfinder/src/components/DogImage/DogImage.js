@@ -28,7 +28,7 @@ export default class DogImage  extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.breed !== this.props.breed) {
+    if (prevProps.breed && prevProps.breed !== this.props.breed) {
       this.fetchImage(this.props.breed, this.props.subBreed);
     }
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 //import SearchResults from './SearchResults';
+import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import DogSearchItem from './DogSearchItem';
 
@@ -18,7 +19,7 @@ class SearchResultsPage extends React.Component {
           <div id="searchTerm" className="row w-100 justify-content-center mb-2 text-capitalize">{searchResults.breedSearch ? "Breed: " : "Searched For: "} {searchResults.searchTerm}</div>
   				<div id="dogResultsList" className="row w-100 justify-content-center m-2">
   					{searchResults.dogResults.map((dogResult, index) => (
-  						<DogSearchItem key={index} itemIndex={index} dog={dogResult} />
+  						<DogSearchItem key={index} itemIndex={index} dog={dogResult} history={this.props.history} />
   					))}
   				</div>
   				<div style={{clear:'both'}}></div>
@@ -42,4 +43,4 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
-export default connect(mapStateToProps)(SearchResultsPage);
+export default withRouter(connect(mapStateToProps)(SearchResultsPage));

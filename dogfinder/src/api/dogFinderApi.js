@@ -55,7 +55,17 @@ export default class DogFinderApi {
 			fetch("https://dog.ceo/api/breeds/list/all").then((apiResponse) => {
 				apiResponse.json().then ((data) => {
 					if (data != null) {
-						resolve(data.message);
+						let allBreeds = data.message;
+						let dogBreeds = {};
+						Object.keys(allBreeds).forEach((breedName) => {
+							dogBreeds[breedName] = {breed: breedName, subBreed: ''};
+							if (allBreeds[breedName].length > 0) {
+								allBreeds[breedName].forEach((subBreedName) => {
+									dogBreeds[subBreedName + ' ' + breedName] = {breed: breedName, subBreed: subBreedName};
+								});
+							}
+						});
+						resolve(dogBreeds);
 					}
 				});
 			});

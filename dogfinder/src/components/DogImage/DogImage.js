@@ -37,7 +37,7 @@ export default class DogImage  extends React.Component {
     return (
       <div style={{position: 'relative'}}>
         <img className="dogResultImg" src={this.state.imageUrl} alt={this.props.breedName} onClick={(this.props.onClick) ? this.props.onClick : null} />
-        <div style={{position: 'absolute', bottom: '0', right: '50%', cursor:'pointer', color:'yellow', font: '18px'}} onClick={() => {this.fetchImage(this.props.breed, this.props.subBreed)}}><MdRefresh size={24} /></div>
+        <div title="Click for another picture" style={{position: 'absolute', bottom: '0', right: '50%', cursor:'pointer', color:'yellow', font: '18px'}} onClick={() => {this.fetchImage(this.props.breed, this.props.subBreed)}}><MdRefresh size={24} /></div>
       </div>
     );
   }

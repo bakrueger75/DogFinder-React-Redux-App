@@ -55,7 +55,7 @@ export default class DogSearchApi {
 					});
 					dogResults.dogResults = dogMatches;
 				} else {
-					dogResults.dogResults = "";
+					dogResults.dogResults = [];
 				}
         setTimeout(() => {
           resolve(dogResults);

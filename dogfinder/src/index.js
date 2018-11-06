@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-//import './css/styles.css';
-import './css/compiled/dogfinder.css';
+import './css/scss/styles.scss';
+//import './css/compiled/styles.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import configureStore from './store/configureStore';
@@ -18,5 +18,5 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </Provider>
-  , document.getElementById('root')
+  , document.getElementById('app')
 );

@@ -16,6 +16,7 @@ const AboutPage = () => {
                   <li>Redux</li>
                   <li>Bootstrap</li>
                   <li>Sass</li>
+                  <li>WebPack</li>
                 </ul>
               </li>
               <li>Data/API Sources:<br/>

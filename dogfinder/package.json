@@ -54,6 +54,6 @@
     "scss:compile": "node-sass --source-comments -r ./src/css/scss/ -o ./src/css/compiled",
     "scss:watch": "npm run scss:compile -- --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   }
 }

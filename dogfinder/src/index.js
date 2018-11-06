@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './css/scss/styles.scss';
-//import './css/compiled/styles.css';
+import './scss/styles.scss';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import configureStore from './store/configureStore';
